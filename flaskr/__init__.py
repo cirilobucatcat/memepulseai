@@ -25,4 +25,12 @@ def create_app(test_config=None):
     def dashboard():
         return render_template("/dashboard/index.html")
 
+    @app.route("/history")
+    def history():
+        return render_template("/history/index.html")
+
+    @app.route("/settings")
+    def settings():
+        return render_template("/settings/index.html")
+
     return app
