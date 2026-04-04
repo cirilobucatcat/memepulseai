@@ -27,6 +27,14 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+  adminer:  # 👈 NEW SERVICE
+    image: adminer
+    container_name: adminer_dev
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
 
 volumes:
   postgres_data:
