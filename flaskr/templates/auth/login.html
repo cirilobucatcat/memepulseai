@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - MemepulseAI</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/output.css') }}"
+    />
+  </head>
+  <body class="w-full h-screen flex items-center justify-center bg-slate-950">
+    <form action="" class="w-125 h-125 bg-slate-900 rounded-xl">
+      <fieldset class="flex flex-col items-center justify-center p-8">
+        <legend class="text-center">
+          <p class="mt-8 text-2xl font-extrabold text-slate-50">
+            Welcome to
+            <span
+              class="text-3xl font-extrabold bg-linear-30 from-20% from-green-400 via-60% via-fuchsia-400 to-90% to-indigo-400 bg-clip-text text-transparent"
+              >MemepulseAI</span
+            >
+          </p>
+        </legend>
+        <p class="text-slate-300">Login to continue</p>
+        <div>
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" />
+        </div>
+        <button
+          class="w-100 py-3 bg-linear-30 from-20% from-green-400 via-60% via-fuchsia-400 to-90% to-indigo-400 font-bold text-xl rounded"
+        >
+          Login
+        </button>
+      </fieldset>
+    </form>
+  </body>
+</html>
