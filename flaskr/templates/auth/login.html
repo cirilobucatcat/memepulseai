@@ -1,41 +1,45 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - MemepulseAI</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/output.css') }}"
-    />
-  </head>
-  <body class="w-full h-screen flex items-center justify-center bg-slate-950">
-    <form action="" class="w-125 h-125 bg-slate-900 rounded-xl">
-      <fieldset class="flex flex-col items-center justify-center p-8">
+{% extends "layouts/guest.html" %}
+{% block title %}
+  Login
+{% endblock title %}
+{% block guest_content %}
+  <div class="z-20 h-fit w-120 rounded-md bg-white p-8 shadow shadow-violet-500/30">
+    <form action="">
+      <fieldset>
         <legend class="text-center">
-          <p class="mt-8 text-2xl font-extrabold text-slate-50">
-            Welcome to
-            <span
-              class="text-3xl font-extrabold bg-linear-30 from-20% from-green-400 via-60% via-fuchsia-400 to-90% to-indigo-400 bg-clip-text text-transparent"
-              >MemepulseAI</span
-            >
-          </p>
+          <h1 class="mt-8 text-2xl font-bold text-violet-950">
+            Welcome to <span class="bg-linear-30 from-violet-600 from-0% to-green-600 to-100% bg-clip-text text-transparent">MemepulseAI</span>
+          </h1>
         </legend>
-        <p class="text-slate-300">Login to continue</p>
-        <div>
-          <label for="username">Username</label>
-          <input type="text" name="username" id="username" />
+        <p class="mt-4 text-center text-violet-950">Login your account to continue</p>
+        <div class="relative mt-4">
+          <input type="email"
+                 id="email"
+                 class="focus:border-brand peer block w-full appearance-none rounded-md border border-violet-600 px-4 py-2.5 focus:ring-0 focus:outline-none"
+                 placeholder=" " />
+          <label for="email"
+                 class="text-body absolute inset-s-2.5 top-3 z-10 origin-left -translate-y-4 scale-75 transform text-sm text-violet-300 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:bg-white peer-focus:px-4 peer-focus:text-xl peer-focus:text-violet-950 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4">
+            Email
+          </label>
         </div>
-        <div>
-          <label for="password">Password</label>
-          <input type="password" name="password" id="password" />
+        <div class="relative mt-4">
+          <input type="password"
+                 id="password"
+                 class="focus:border-brand peer block w-full appearance-none rounded-md border border-violet-600 px-4 py-2.5 focus:ring-0 focus:outline-none"
+                 placeholder=" " />
+          <label for="password"
+                 class="text-body absolute inset-s-2.5 top-3 z-10 origin-left -translate-y-4 scale-75 transform text-sm text-violet-300 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:bg-white peer-focus:px-4 peer-focus:text-xl peer-focus:text-violet-950 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4">
+            Password
+          </label>
+          <a href="/forgout-passowrd" class="text-sm text-violet-600 underline">Forgot password?</a>
         </div>
-        <button
-          class="w-100 py-3 bg-linear-30 from-20% from-green-400 via-60% via-fuchsia-400 to-90% to-indigo-400 font-bold text-xl rounded"
-        >
+        <button class="mt-4 block w-full rounded-md bg-violet-600 py-4 font-bold tracking-tight hover:bg-violet-500 cursor-pointer transition-all duration-300 hover:-translate-y-0.5 text-violet-50 uppercase">
           Login
+        </button>
+        <button class="mt-4 block w-full rounded-md border border-violet-600 bg-violet-50 py-4 font-bold tracking-tight text-violet-950 hover:bg-violet-200 cursor-pointer transition-all duration-300 hover:-translate-y-0.5 uppercase">
+          Sign up
         </button>
       </fieldset>
     </form>
-  </body>
-</html>
+  </div>
+{% endblock guest_content %}

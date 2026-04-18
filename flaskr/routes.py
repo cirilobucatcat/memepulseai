@@ -14,8 +14,8 @@ def register():
 
 
 @main.route("/")
-def dashboard():
-    return render_template("/dashboard/index.html")
+def home():
+    return render_template("/home/index.html")
 
 
 @main.route("/history")

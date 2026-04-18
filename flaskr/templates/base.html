@@ -1,24 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Memepulse.ai{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
-</head>
-<body>
-    <nav>
-        <a href="/">Dashboard</a>
-        <a href="/history">History</a>
-        <a href="/settings">Settings</a>
-    </nav>
-
-    <main>
-        {% block content %}{% endblock %}
-    </main>
-
-    <footer>
-        <p>&copy; 2026 memepulse.ai</p>
-    </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} {% endblock title %} - Memepulse.ai</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/output.css') }}"
+    />
+  </head>
+  <body class="relative">
+    <div
+      class="absolute -top-35 left-50 z-10 size-100 rounded-full bg-violet-500/30 blur-2xl"
+    ></div>
+    <div
+      class="absolute right-50 bottom-0 z-10 size-50 rounded-full bg-violet-500/30 blur-2xl"
+    ></div>
+    {% block content %} {% endblock content %}
+  </body>
 </html>

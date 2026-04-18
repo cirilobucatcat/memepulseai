@@ -1,12 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends "layouts/guest.html" %}
+{% block title %}
+    Login
+{% endblock title %}
+{% block guest_content %}
+    <div class="z-20 h-fit w-120 rounded-md bg-white p-8 shadow shadow-violet-500/30">
+        <fieldset>
+            <legend class="text-center">
+                <h1 class="mt-8 text-2xl font-bold text-violet-950">
+                    Welcome to <span class="bg-linear-30 from-violet-600 from-0% to-green-600 to-100% bg-clip-text text-transparent">MemepulseAI</span>
+                </h1>
+            </legend>
+            <p class="mt-4 text-center text-violet-950">
+                Create your account and make your Meme popular for <b>free</b>
+            </p>
+            <div class="relative mt-4">
+                <input type="text"
+                       id="name"
+                       class="focus:border-brand peer block w-full appearance-none rounded-md border border-violet-600 px-4 py-2.5 focus:ring-0 focus:outline-none"
+                       placeholder=" " />
+                <label for="name"
+                       class="text-body absolute inline-s-2.5 top-3 z-10 origin-left -translate-y-4 scale-75 transform text-sm text-violet-300 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:bg-white peer-focus:px-4 peer-focus:text-xl peer-focus:text-violet-950 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4">
+                    Name
+                </label>
+            </div>
+            <div class="relative mt-4">
+                <input type="email"
+                       id="email"
+                       class="focus:border-brand peer block w-full appearance-none rounded-md border border-violet-600 px-4 py-2.5 focus:ring-0 focus:outline-none"
+                       placeholder=" " />
+                <label for="email"
+                       class="text-body absolute inline-s-2.5 top-3 z-10 origin-left -translate-y-4 scale-75 transform text-sm text-violet-300 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:bg-white peer-focus:px-4 peer-focus:text-xl peer-focus:text-violet-950 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4">
+                    Email
+                </label>
+            </div>
+            <div class="relative mt-4">
+                <input type="password"
+                       id="password"
+                       class="focus:border-brand peer block w-full appearance-none rounded-md border border-violet-600 px-4 py-2.5 focus:ring-0 focus:outline-none"
+                       placeholder=" " />
+                <label for="password"
+                       class="text-body absolute inline-s-2.5 top-3 z-10 origin-left -translate-y-4 scale-75 transform text-sm text-violet-300 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:bg-white peer-focus:px-4 peer-focus:text-xl peer-focus:text-violet-950 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4">
+                    Password
+                </label>
+            </div>
+            <div class="relative mt-4">
+                <input type="password"
+                       id="confirm_password"
+                       class="focus:border-brand peer block w-full appearance-none rounded-md border border-violet-600 px-4 py-2.5 focus:ring-0 focus:outline-none"
+                       placeholder=" " />
+                <label for="confirm_password"
+                       class="text-body absolute inline-s-2.5 top-3 z-10 origin-left -translate-y-4 scale-75 transform text-sm text-violet-300 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:bg-white peer-focus:px-4 peer-focus:text-xl peer-focus:text-violet-950 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4">
+                    Confirm Password
+                </label>
+            </div>
+            <button class="mt-8 block w-full cursor-pointer rounded-md bg-violet-600 py-4 font-bold tracking-tight text-violet-50 uppercase transition-all duration-300 hover:-translate-y-0.5 hover:bg-violet-500">
+                Sign up
+            </button>
+            <button class="mt-4 block w-full cursor-pointer rounded-md border border-violet-600 bg-violet-50 py-4 font-bold tracking-tight text-violet-950 uppercase transition-all duration-300 hover:-translate-y-0.5 hover:bg-violet-200">
+                Login
+            </button>
+        </fieldset>
+    </div>
+{% endblock guest_content %}
