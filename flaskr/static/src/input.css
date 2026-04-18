@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+.nav-item {
+    @apply hover:bg-violet-50 font-medium transition-all duration-300 p-4 flex space-x-2;
+}
+
+.active {
+    @apply bg-violet-50;
+}
